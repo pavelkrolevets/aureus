@@ -16,8 +16,8 @@ package rest
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/gitbitex/gitbitex-spot/service"
-	"github.com/gitbitex/gitbitex-spot/utils"
+	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/gitbitex-spot/utils"
 	"net/http"
 )
 

@@ -15,7 +15,7 @@
 package matching
 
 import (
-	"github.com/gitbitex/gitbitex-spot/models"
+	"github.com/pavelkrolevets/gitbitex-spot/models"
 	logger "github.com/siddontang/go-log/log"
 	"time"
 )

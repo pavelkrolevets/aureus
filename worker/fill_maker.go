@@ -15,10 +15,10 @@
 package worker
 
 import (
-	"github.com/gitbitex/gitbitex-spot/matching"
-	"github.com/gitbitex/gitbitex-spot/models"
-	"github.com/gitbitex/gitbitex-spot/models/mysql"
-	"github.com/gitbitex/gitbitex-spot/service"
+	"github.com/pavelkrolevets/gitbitex-spot/matching"
+	"github.com/pavelkrolevets/gitbitex-spot/models"
+	"github.com/pavelkrolevets/gitbitex-spot/models/mysql"
+	"github.com/pavelkrolevets/gitbitex-spot/service"
 	"github.com/siddontang/go-log/log"
 	"time"
 )

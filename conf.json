@@ -2,9 +2,9 @@
   "dataSource": {
     "driverName": "mysql",
     "addr": "127.0.0.1:3306",
-    "database": "spot",
+    "database": "gitbitex",
     "user": "root",
-    "password": "",
+    "password": "yourpassword",
     "enableAutoMigrate": false
   },
   "redis": {
@@ -17,11 +17,11 @@
     ]
   },
   "pushServer": {
-    "addr": ":8002",
+    "addr": "127.0.0.1:8002",
     "path": "/ws"
   },
   "restServer": {
-    "addr": ":8001"
+    "addr": "127.0.0.1:8001"
   },
   "jwtSecret": "flj23jfoi23apdl3jfslkj23za01mf3"
 }
