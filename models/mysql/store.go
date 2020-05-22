@@ -16,8 +16,8 @@ package mysql
 
 import (
 	"fmt"
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/models"
 	"github.com/jinzhu/gorm"
 	"github.com/prometheus/common/log"
 	"reflect"

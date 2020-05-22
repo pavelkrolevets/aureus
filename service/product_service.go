@@ -15,8 +15,8 @@
 package service
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/models/mysql"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/models/mysql"
 )
 
 func GetProductById(id string) (*models.Product, error) {

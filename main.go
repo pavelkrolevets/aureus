@@ -15,13 +15,13 @@
 package main
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/matching"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/pushing"
-	"github.com/pavelkrolevets/gitbitex-spot/rest"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
-	"github.com/pavelkrolevets/gitbitex-spot/worker"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/matching"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/pushing"
+	"github.com/pavelkrolevets/aureus/rest"
+	"github.com/pavelkrolevets/aureus/service"
+	"github.com/pavelkrolevets/aureus/worker"
 	"github.com/prometheus/common/log"
 	"net/http"
 	_ "net/http/pprof"

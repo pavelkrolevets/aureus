@@ -11,7 +11,7 @@
 ### Install
 #### Server
 * git clone https://github.com/pavelkrolevets/aureus.git
-* Create database and make sure **BINLOG[ROW format]** enabled
+* Create database `aureus` and make sure **BINLOG[ROW format]** enabled
 * Execute ddl.sql
 * Modify conf.json
 * Run go build

@@ -17,8 +17,8 @@ package service
 import (
 	"errors"
 	"fmt"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/models/mysql"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/models/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/shopspring/decimal"
 	"log"

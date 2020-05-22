@@ -15,8 +15,8 @@
 package matching
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/service"
 	"github.com/siddontang/go-log/log"
 )
 

@@ -15,9 +15,9 @@
 package pushing
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/matching"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/matching"
+	"github.com/pavelkrolevets/aureus/service"
 	"github.com/siddontang/go-log/log"
 )
 

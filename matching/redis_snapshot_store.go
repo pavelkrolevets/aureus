@@ -16,7 +16,7 @@ package matching
 
 import (
 	"encoding/json"
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
+	"github.com/pavelkrolevets/aureus/conf"
 	"github.com/go-redis/redis"
 	"time"
 )

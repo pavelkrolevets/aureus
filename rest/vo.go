@@ -16,8 +16,8 @@ package rest
 
 import (
 	"fmt"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/utils"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/utils"
 	"strings"
 	"time"
 )

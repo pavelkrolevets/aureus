@@ -15,7 +15,7 @@
 package matching
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/models"
+	"github.com/pavelkrolevets/aureus/models"
 )
 
 // 用于撮合引擎读取order，需要支持设置offset，从指定的offset开始读取

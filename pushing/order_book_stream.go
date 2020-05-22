@@ -16,7 +16,7 @@ package pushing
 
 import (
 	"fmt"
-	"github.com/pavelkrolevets/gitbitex-spot/matching"
+	"github.com/pavelkrolevets/aureus/matching"
 	logger "github.com/siddontang/go-log/log"
 	"sync"
 	"time"

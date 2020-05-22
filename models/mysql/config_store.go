@@ -14,7 +14,7 @@
 
 package mysql
 
-import "github.com/pavelkrolevets/gitbitex-spot/models"
+import "github.com/pavelkrolevets/aureus/models"
 
 func (s *Store) GetConfigs() ([]*models.Config, error) {
 	var configs []*models.Config

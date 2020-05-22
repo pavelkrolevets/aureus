@@ -16,7 +16,7 @@ package mysql
 
 import (
 	"fmt"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
+	"github.com/pavelkrolevets/aureus/models"
 	"strings"
 	"time"
 )

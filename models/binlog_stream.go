@@ -16,8 +16,8 @@ package models
 
 import (
 	"encoding/json"
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/utils"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/utils"
 	"github.com/go-redis/redis"
 	"github.com/shopspring/decimal"
 	"github.com/siddontang/go-log/log"

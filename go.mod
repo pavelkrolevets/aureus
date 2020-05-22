@@ -1,4 +1,4 @@
-module github.com/pavelkrolevets/gitbitex-spot
+module github.com/pavelkrolevets/aureus
 
 go 1.12
 

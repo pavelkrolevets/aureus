@@ -15,7 +15,7 @@
 package rest
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
+	"github.com/pavelkrolevets/aureus/conf"
 	"github.com/siddontang/go-log/log"
 )
 

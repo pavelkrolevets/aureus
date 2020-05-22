@@ -15,9 +15,9 @@
 package worker
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/matching"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/matching"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/service"
 	"github.com/shopspring/decimal"
 	"github.com/siddontang/go-log/log"
 	"time"

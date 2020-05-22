@@ -15,8 +15,8 @@
 package service
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/models/mysql"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/models/mysql"
 )
 
 func GetLastTickByProductId(productId string, granularity int64) (*models.Tick, error) {

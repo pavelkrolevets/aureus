@@ -16,7 +16,7 @@ package rest
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/service"
 	"net/http"
 	"time"
 )

@@ -15,7 +15,7 @@
 package matching
 
 import (
-	"github.com/pavelkrolevets/gitbitex-spot/models"
+	"github.com/pavelkrolevets/aureus/models"
 	"github.com/shopspring/decimal"
 	"time"
 )

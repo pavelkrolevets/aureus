@@ -16,9 +16,9 @@ package worker
 
 import (
 	"encoding/json"
-	"github.com/pavelkrolevets/gitbitex-spot/conf"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/conf"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/service"
 	"github.com/go-redis/redis"
 	"github.com/siddontang/go-log/log"
 	"time"

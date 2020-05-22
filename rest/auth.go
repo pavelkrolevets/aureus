@@ -17,8 +17,8 @@ package rest
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
-	"github.com/pavelkrolevets/gitbitex-spot/models"
-	"github.com/pavelkrolevets/gitbitex-spot/service"
+	"github.com/pavelkrolevets/aureus/models"
+	"github.com/pavelkrolevets/aureus/service"
 	"net/http"
 )
 
