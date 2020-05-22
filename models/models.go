@@ -155,6 +155,29 @@ type Product struct {
 	QuoteIncrement float64
 }
 
+type ProductDeriv struct {
+	Id             	string `gorm:"column:id;primary_key"`
+	CreatedAt      	time.Time
+	UpdatedAt      	time.Time
+	BaseCurrency   	string
+	QuoteCurrency  	string
+	BaseMinSize    	decimal.Decimal `sql:"type:decimal(32,16);"`
+	BaseMaxSize    	decimal.Decimal `sql:"type:decimal(32,16);"`
+	QuoteMinSize   	decimal.Decimal `sql:"type:decimal(32,16);"`
+	QuoteMaxSize   	decimal.Decimal `sql:"type:decimal(32,16);"`
+	BaseScale      	int32
+	QuoteScale     	int32
+	QuoteIncrement 	float64
+	Expiration 		time.Time
+	Strike 			int32
+	OptionType 		string
+	IsActive 		bool
+	MinTradeSize 	decimal.Decimal `sql:"type:decimal(32,16);"`
+	Kind 			string
+	SettlementType 	string
+	ContractSize 	int32
+}
+
 type Order struct {
 	Id            int64 `gorm:"column:id;primary_key;AUTO_INCREMENT"`
 	CreatedAt     time.Time

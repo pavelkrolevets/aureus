@@ -84,6 +84,17 @@ type ProductVo struct {
 	QuoteScale     int32  `json:"quoteScale"`
 }
 
+type ProductDerivVo struct {
+	Id             string `json:"id"`
+	BaseCurrency   string `json:"baseCurrency"`
+	QuoteCurrency  string `json:"quoteCurrency"`
+	BaseMinSize    string `json:"baseMinSize"`
+	BaseMaxSize    string `json:"baseMaxSize"`
+	QuoteIncrement string `json:"quoteIncrement"`
+	BaseScale      int32  `json:"baseScale"`
+	QuoteScale     int32  `json:"quoteScale"`
+}
+
 type tradeVo struct {
 	Time    string `json:"time"`
 	TradeId int64  `json:"tradeId"`
@@ -187,6 +198,19 @@ func newTradeVo(trade *models.Trade) *tradeVo {
 
 func newProductVo(product *models.Product) *ProductVo {
 	return &ProductVo{
+		Id:             product.Id,
+		BaseCurrency:   product.BaseCurrency,
+		QuoteCurrency:  product.QuoteCurrency,
+		BaseMinSize:    product.BaseMinSize.String(),
+		BaseMaxSize:    product.BaseMaxSize.String(),
+		QuoteIncrement: utils.F64ToA(product.QuoteIncrement),
+		BaseScale:      product.BaseScale,
+		QuoteScale:     product.QuoteScale,
+	}
+}
+
+func newProductDerivVo(product *models.ProductDeriv) *ProductDerivVo {
+	return &ProductDerivVo{
 		Id:             product.Id,
 		BaseCurrency:   product.BaseCurrency,
 		QuoteCurrency:  product.QuoteCurrency,

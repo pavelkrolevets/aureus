@@ -33,3 +33,18 @@ func (s *Store) GetProducts() ([]*models.Product, error) {
 	err := s.db.Find(&products).Error
 	return products, err
 }
+
+func (s *Store) GetProductByIdDeriv(id string) (*models.ProductDeriv, error) {
+	var product models.ProductDeriv
+	err := s.db.Raw("SELECT * FROM g_product_deriv WHERE id=?", id).Scan(&product).Error
+	if err == gorm.ErrRecordNotFound {
+		return nil, nil
+	}
+	return &product, err
+}
+
+func (s *Store) GetProductsDeriv() ([]*models.ProductDeriv, error) {
+	var products []*models.ProductDeriv
+	err := s.db.Find(&products).Error
+	return products, err
+}

@@ -37,6 +37,22 @@ func GetProducts(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, productVos)
 }
 
+// GET /products/der
+func GetProductsDeriv(ctx *gin.Context) {
+	products, err := service.GetProductsDeriv()
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, newMessageVo(err))
+		return
+	}
+
+	var productVos []*ProductDerivVo
+	for _, product := range products {
+		productVos = append(productVos, newProductDerivVo(product))
+	}
+
+	ctx.JSON(http.StatusOK, productVos)
+}
+
 // GET /products/<product-id>/book?level=[1,2,3]
 func GetProductOrderBook(ctx *gin.Context) {
 	//todo

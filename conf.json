@@ -4,7 +4,7 @@
     "addr": "127.0.0.1:3306",
     "database": "aureus",
     "user": "root",
-    "password": "yourpassword",
+    "password": "Gfdtk81,",
     "enableAutoMigrate": false
   },
   "redis": {

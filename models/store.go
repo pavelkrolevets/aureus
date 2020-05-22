@@ -38,6 +38,8 @@ type Store interface {
 
 	GetProductById(id string) (*Product, error)
 	GetProducts() ([]*Product, error)
+	GetProductByIdDeriv(id string) (*ProductDeriv, error)
+	GetProductsDeriv() ([]*ProductDeriv, error)
 
 	GetOrderById(orderId int64) (*Order, error)
 	GetOrderByClientOid(userId int64, clientOid string) (*Order, error)

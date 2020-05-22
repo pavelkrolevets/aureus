@@ -41,6 +41,7 @@ func (server *HttpServer) Start() {
 	r.POST("/api/users/accessToken", SignIn)
 	r.POST("/api/users/token", GetToken)
 	r.GET("/api/products", GetProducts)
+	r.GET("/api/products_der", GetProductsDeriv)
 	r.GET("/api/products/:productId/trades", GetProductTrades)
 	r.GET("/api/products/:productId/book", GetProductOrderBook)
 	r.GET("/api/products/:productId/candles", GetProductCandles)

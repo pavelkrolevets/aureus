@@ -26,3 +26,12 @@ func GetProductById(id string) (*models.Product, error) {
 func GetProducts() ([]*models.Product, error) {
 	return mysql.SharedStore().GetProducts()
 }
+
+func GetProductByIdDeriv(id string) (*models.ProductDeriv, error) {
+	return mysql.SharedStore().GetProductByIdDeriv(id)
+}
+
+
+func GetProductsDeriv() ([]*models.ProductDeriv, error) {
+	return mysql.SharedStore().GetProductsDeriv()
+}
