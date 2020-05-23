@@ -95,7 +95,7 @@ type ProductDerivVo struct {
 	QuoteScale     int32  `json:"quoteScale"`
 }
 
-type tradeVo struct {
+type  tradeVo struct {
 	Time    string `json:"time"`
 	TradeId int64  `json:"tradeId"`
 	Price   string `json:"price"`
