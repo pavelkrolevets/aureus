@@ -93,6 +93,11 @@ type ProductDerivVo struct {
 	QuoteIncrement string `json:"quoteIncrement"`
 	BaseScale      int32  `json:"baseScale"`
 	QuoteScale     int32  `json:"quoteScale"`
+	Kind           string `json:"kind"`
+	Expiration     time.Time `json:"expiration"`
+	OptionType     string `json:"optionType"`
+	IsActive       bool   `json:"isActive"`
+	Strike         int32  `json:"strike"`
 }
 
 type  tradeVo struct {
@@ -219,6 +224,11 @@ func newProductDerivVo(product *models.ProductDeriv) *ProductDerivVo {
 		QuoteIncrement: utils.F64ToA(product.QuoteIncrement),
 		BaseScale:      product.BaseScale,
 		QuoteScale:     product.QuoteScale,
+		Kind:           product.Kind,
+		Expiration:     product.Expiration,
+		OptionType:     product.OptionType,
+		IsActive:       product.IsActive,
+		Strike:         product.Strike,
 	}
 }
 
