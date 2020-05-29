@@ -98,6 +98,14 @@ CREATE TABLE `g_product` (
   `quote_increment` double NOT NULL,
   `quote_min_size` decimal(32,16) NOT NULL,
   `quote_max_size` decimal(32,16) NOT NULL,
+   `expiration` timestamp,
+  `strike` bigint(20) DEFAULT NULL,
+  `option_type` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '1',
+  `min_trade_size` decimal(32,16),
+  `kind` varchar(255) NOT NULL,
+  `settlement_type` varchar(255),
+  `contract_size` bigint(20),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -146,38 +154,12 @@ CREATE TABLE `g_user` (
   UNIQUE KEY `idx_email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
-CREATE TABLE `g_product_deriv` (
-  `id` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `base_currency` varchar(255) NOT NULL,
-  `quote_currency` varchar(255) NOT NULL,
-  `base_min_size` decimal(32,16) NOT NULL,
-  `base_max_size` decimal(32,16) NOT NULL,
-  `base_scale` int(11) NOT NULL,
-  `quote_scale` int(11) NOT NULL,
-  `quote_increment` double NOT NULL,
-  `quote_min_size` decimal(32,16) NOT NULL,
-  `quote_max_size` decimal(32,16) NOT NULL,
-  `expiration` timestamp NOT NULL,
-  `strike` bigint(20) DEFAULT NULL,
-  `option_type` varchar(255) DEFAULT NULL,
-  `is_active` tinyint(1) NOT NULL DEFAULT '1',
-  `min_trade_size` decimal(32,16) NOT NULL,
-  `kind` varchar(255) NOT NULL,
-  `settlement_type` varchar(255) NOT NULL,
-  `contract_size` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-insert into `g_product`(`id`,`created_at`,`updated_at`,`base_currency`,`quote_currency`,`base_min_size`,`base_max_size`,`base_scale`,`quote_scale`,`quote_increment`,`quote_min_size`,`quote_max_size`) values
-('BCH-USDT',null,null,'BCH','USDT',0.0000100000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16),
-('BTC-USDT',null,null,'BTC','USDT',0.0000100000000000,10000000.0000000000000000,6,2,0.01,0E-16,0E-16),
-('EOS-USDT',null,null,'EOS','USDT',0.0001000000000000,1000.0000000000000000,4,3,0,0E-16,0E-16),
-('ETH-USDT',null,null,'ETH','USDT',0.0001000000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16),
-('LTC-USDT',null,null,'LTC','USDT',0.0010000000000000,1000.0000000000000000,4,2,0.01,0E-16,0E-16);
-
-insert into `g_product_deriv`(`id`,`created_at`,`updated_at`,`base_currency`,`quote_currency`,`base_min_size`,`base_max_size`,`base_scale`,`quote_scale`,`quote_increment`,`quote_min_size`,`quote_max_size`, `expiration`, `strike`, `option_type`, `is_active`, `min_trade_size`, `kind`, `settlement_type`, `contract_size`) values
+insert into `g_product`(`id`,`created_at`,`updated_at`,`base_currency`,`quote_currency`,`base_min_size`,`base_max_size`,`base_scale`,`quote_scale`,`quote_increment`,`quote_min_size`,`quote_max_size`, `expiration`, `strike`, `option_type`, `is_active`, `min_trade_size`, `kind`, `settlement_type`, `contract_size`) values
+('BCH-USDT',null,null,'BCH','USDT',0.0000100000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16, null, null , null, 1, null, 'spot', 'cash', 0),
+('BTC-USDT',null,null,'BTC','USDT',0.0000100000000000,10000000.0000000000000000,6,2,0.01,0E-16,0E-16, null, null , null, 1, null, 'spot', 'cash', 0),
+('EOS-USDT',null,null,'EOS','USDT',0.0001000000000000,1000.0000000000000000,4,3,0,0E-16,0E-16, null, null , null, 1, null, 'spot', 'cash', 0),
+('ETH-USDT',null,null,'ETH','USDT',0.0001000000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16, null, null , null, 1, null, 'spot', 'cash', 0),
+('LTC-USDT',null,null,'LTC','USDT',0.0010000000000000,1000.0000000000000000,4,2,0.01,0E-16,0E-16, null, null , null, 1, null, 'spot', 'cash', 0),
 ('BTC-27MAR20-20000-C',null,null,'BTC','USDT',0.0000100000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16,'2020-03-27 04:00:00', 20000, 'call', 1, 0.01, 'option', 'cash', 0),
 ('BTC-27MAR20',null,null,'BTC','USDT',0.0000100000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16,'2020-03-27 04:00:00', null ,  'future', 1, 0.01, 'future', 'cash', 0),
 ('BTC-PERPETUAL',null,null,'BTC','USDT',0.0000100000000000,10000.0000000000000000,4,2,0.01,0E-16,0E-16,'2030-01-01 04:00:00', null , 'future', 1, 0.01, 'future', 'cash', 0),

@@ -153,6 +153,14 @@ type Product struct {
 	BaseScale      int32
 	QuoteScale     int32
 	QuoteIncrement float64
+	Expiration 		time.Time
+	Strike 			int32
+	OptionType 		string
+	IsActive 		bool
+	MinTradeSize 	decimal.Decimal `sql:"type:decimal(32,16);"`
+	Kind 			string
+	SettlementType 	string
+	ContractSize 	int32
 }
 
 type ProductDeriv struct {

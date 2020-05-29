@@ -24,6 +24,7 @@ func StartEngine() {
 	gbeConfig := conf.GetConfig()
 
 	products, err := service.GetProducts()
+	log.Warn(products)
 	if err != nil {
 		panic(err)
 	}
@@ -34,6 +35,6 @@ func StartEngine() {
 		matchEngine := NewEngine(product, orderReader, logStore, snapshotStore)
 		matchEngine.Start()
 	}
-
+	
 	log.Info("match engine ok")
 }
